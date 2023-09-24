@@ -1,0 +1,8 @@
+/**
+ * Minified by jsDelivr using Terser v5.3.5.
+ * Original file: /npm/consol@1.0.2/index.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+const{inspect:inspect}=require("util"),{EOL:EOL}=require("os"),micromatch=require("micromatch"),colors=require("colors/safe"),{DEBUG:DEBUG=""}=process.env,noop=function(){},types={debug:0,trace:0,info:1,log:2,warn:3,error:4},typeColors={debug:"gray",trace:"gray",info:"white",log:"white",warn:"yellow",error:"red"},getStackTrace=()=>(new Error).stack.split(/\n/g).slice(1).map(((o,e)=>e?o:o.slice(1))).join(EOL),prevConsole=Object.keys(types).reduce(((o,e)=>({...o,[e]:console[e].bind(console)})),{});function applyTo(o,e={}){const{prefix:r,enabled:n=!0}=e;function t(o,...e){"trace"===o&&(e=[...e,"\n",(new Error).stack.split(/\n/g).slice(1).map(((o,e)=>e?o:o.slice(1))).join(EOL)]);const n=colors[typeColors[o]](o.toUpperCase()),t=e.map((o=>"object"==typeof o?inspect(o,{colors:!0}):o)).join(" ").split(/\n/g).map((o=>[n,...r?[r]:[],o].join(" "))).join(EOL);return"trace"===o&&(o="debug"),prevConsole[o](t)}for(const e of Object.keys(types))o[e]=n?t.bind(o,e):noop;return o.global=t,o}const consol=applyTo({});consol.types=types,consol.debugger=function(o){return micromatch.any(o,DEBUG.split(/,/g))?applyTo({},{prefix:`(${o})`}).debug:noop},module.exports=consol;
+//# sourceMappingURL=/sm/e2842d6b51431085caf22e79eb3cb9af55abec0252035e4c71951487c22634bf.map

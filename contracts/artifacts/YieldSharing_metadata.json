@@ -1,0 +1,80 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_fttContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_ftoContractAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "distributedAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ftoTokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "distributeProfit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/YieldSharing.sol": "YieldSharing"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/YieldSharing.sol": {
+			"keccak256": "0x1714d66d59be4a8a87694c6cdb4f1ce8c9ee6a7b83d197da40eb43ed844ac95d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b199724d4e7f5ce16be9172d20e59985b4fbdde2f2ad3a2ed504b1d553de8303",
+				"dweb:/ipfs/QmY2p1wY18E7TZoxuZ5r5tt35qFabEPjic7vghfZZ1qsfT"
+			]
+		}
+	},
+	"version": 1
+}
